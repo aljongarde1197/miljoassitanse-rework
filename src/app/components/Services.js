@@ -12,7 +12,6 @@ import {
 import { useLanguage } from "../../../LanguageContext";
 import { ServicesTranslations } from "../../../translations.js";
 
-// Map service titles to icons
 const iconsMap = {
   "Innvendig maling": PaintBrushIcon,
   "Utvendig maling": HomeIcon,
@@ -47,9 +46,13 @@ const serviceIdMap = {
 };
 
 export default function Services() {
-  const { language } = useLanguage(); 
-  const lang = language?.toLowerCase() || "no"; 
+  const { language } = useLanguage();
+  const lang = language?.toLowerCase() || "no";
   const data = ServicesTranslations[lang];
+
+  // ⭐ Prevent rendering until translations are loaded
+  if (!data || !data.list) return null;
+
   const services = data.list;
 
   const headingRef = useRef(null);
@@ -95,6 +98,7 @@ export default function Services() {
 
   return (
     <div id="services" className="max-w-7xl mx-auto py-20 px-4">
+      {/* Section heading small */}
       <h2
         className={`text-sm md:text-2xl font-thin text-left tracking-wider mb-2 transform transition-all duration-700 ${
           headingVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"
@@ -103,6 +107,7 @@ export default function Services() {
         {data.headingSmall}
       </h2>
 
+      {/* Section heading large */}
       <h2
         ref={headingRef}
         className={`text-3xl font-bold mb-12 text-left transform transition-all duration-700 ${
@@ -112,6 +117,7 @@ export default function Services() {
         {data.headingLarge}
       </h2>
 
+      {/* Services */}
       <div className="flex flex-col gap-16">
         {services.map((s, index) => {
           const Icon = iconsMap[s.title];
@@ -119,7 +125,7 @@ export default function Services() {
 
           return (
             <div
-              id={serviceIdMap[s.title]}   // <-- ★ FIXED: Enables navbar jumping
+              id={serviceIdMap[s.title]} // needed for navbar scroll
               key={s.title}
               ref={(el) => (servicesRefs.current[index] = el)}
               data-index={index}
@@ -127,7 +133,6 @@ export default function Services() {
                 isAnimated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
               } ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
             >
-
               <div className="md:w-1/2">
                 <img
                   src={s.img}
@@ -144,7 +149,6 @@ export default function Services() {
                 <h3 className="text-2xl font-semibold mb-6">{s.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{s.desc}</p>
               </div>
-
             </div>
           );
         })}
