@@ -131,7 +131,7 @@ export default function Navbar() {
                           <a
                             key={item.id}
                             href={`#${item.id}`}
-                            className="flex items-center gap-2 px-4 py-2 text-primary hover:bg-gray-100 rounded-lg transition-colors"
+                            className="flex items-center gap-2 px-4 py-2 text-primary hover:bg-gray-100 rounded-lg transition-colors tracking-wider"
                           >
                             <Icon className="w-5 h-5" />
                             {item.label}
@@ -147,7 +147,7 @@ export default function Navbar() {
                 <a
                   key={sec.id}
                   href={`#${sec.id}`}
-                  className={`relative capitalize transition-colors duration-300 ${
+                  className={`relative capitalize transition-colors duration-300 tracking-wider ${
                     isActive
                       ? scrolled
                         ? "text-primary"
@@ -158,7 +158,7 @@ export default function Navbar() {
                   }`}
                 >
                   <span
-                    className={`absolute bottom-0 left-0 h-0.5 bg-current transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-current transition-all duration-300 tracking-wider ${
                       isActive ? "w-full" : "w-0"
                     }`}
                   ></span>
@@ -171,8 +171,8 @@ export default function Navbar() {
           {/* Contact Us button */}
           <a
             href="#contact"
-            className={`flex items-center px-6 py-2 rounded-lg border border-white/30 backdrop-blur-md
-              text-white font-semibold shadow-lg
+            className={`flex items-center px-6 py-2 rounded-full border border-white/30 backdrop-blur-md
+              text-white font-thin shadow-lg tracking-wider
               transition-all duration-300
               ${scrolled ? "bg-primary border-primary" : "bg-white/20"}
               hover:bg-primary hover:border-primary hover:text-white`}

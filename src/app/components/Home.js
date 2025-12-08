@@ -95,7 +95,7 @@ export default function Home() {
             }`}
           />
           <h1
-            className={`text-4xl md:text-4xl font-bold mb-4 drop-shadow-lg transition-opacity duration-1000 uppercase ${
+            className={`text-4xl md:text-4xl font-bold mb-4 drop-shadow-lg transition-opacity duration-1000 uppercase tracking-wider ${
               showTitle ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -103,17 +103,17 @@ export default function Home() {
           </h1>
 
           <div className={`transition-opacity duration-1000 ${showContent ? "opacity-100" : "opacity-0"}`}>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto mb-6 text-gray-200">{homeText.heroSubtitle}</p>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto mb-6 text-gray-200 tracking-wider">{homeText.heroSubtitle}</p>
             <div className="flex justify-center items-center gap-4 flex-wrap">
               <a
                 href="#about"
-                className="px-6 py-3 rounded-lg border border-white/30 bg-primary/40 backdrop-blur-md text-white font-semibold shadow-lg hover:bg-primary/50 hover:border-primary/50 hover:backdrop-blur-xs transition-all duration-300"
+                className="px-10 py-3 rounded-full border border-white/30 bg-primary/40 backdrop-blur-md text-white font-thin shadow-lg hover:bg-primary/50 hover:border-primary/50 hover:backdrop-blur-xs transition-all duration-300 tracking-wider"
               >
                 {homeText.ctaStart}
               </a>
               <a
                 href="#services"
-                className="px-6 py-3 rounded-lg border border-white/30 bg-white/20 backdrop-blur-md text-white font-semibold shadow-lg hover:bg-white/20 hover:border-primary/50 hover:backdrop-blur-xs transition-all duration-300"
+                className="px-10 py-3 rounded-full border border-white/30 bg-white/20 backdrop-blur-md text-white font-thin shadow-lg hover:bg-white/20 hover:border-primary/50 hover:backdrop-blur-xs transition-all duration-300 tracking-wider"
               >
                 {homeText.ctaServices}
               </a>

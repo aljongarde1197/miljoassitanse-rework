@@ -164,7 +164,7 @@ export default function Contact() {
 
           <button
             onClick={handleSubmit}
-            className="bg-primary text-white font-semibold py-3 rounded-xl hover:bg-primary-dark transition"
+            className="bg-primary text-white font-thin py-3 rounded-full hover:bg-primary-dark transition hover:bg-light duration-300 cursor-pointer tracking-wider"
           >
             {contactText.form.submit}
           </button>

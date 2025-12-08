@@ -73,7 +73,7 @@ export default function About() {
           {aboutText.heading}
         </h2>
         <h2
-          className={`text-3xl font-bold mb-6 text-center transform transition-all duration-700 ${
+          className={`text-3xl font-bold mb-6 text-center transform transition-all duration-700 uppercase ${
             headingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
           }`}
         >
