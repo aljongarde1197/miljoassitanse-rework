@@ -69,7 +69,7 @@ export default function Evaluations() {
         <h2
           ref={(el) => (titleRef.current[0] = el)}
           data-index={0}
-          className={`text-sm md:text-2xl font-thin tracking-widest mb-2 uppercase text-left text-gray-600 transform transition-all duration-700 ${
+          className={`text-sm md:text-lg font-thin tracking-widest mb-2 uppercase text-left text-gray-600 transform transition-all duration-700 ${
             titlesVisible.includes(0) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >

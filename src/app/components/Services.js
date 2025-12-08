@@ -100,7 +100,7 @@ export default function Services() {
     <div id="services" className="max-w-7xl mx-auto py-20 px-4">
       {/* Section heading small */}
       <h2
-        className={`text-sm md:text-2xl font-thin text-left tracking-wider mb-2 transform transition-all duration-700 ${
+        className={`text-sm md:text-lg font-thin text-left tracking-wider mb-2 transform transition-all duration-700 ${
           headingVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"
         }`}
       >

@@ -59,7 +59,7 @@ export default function Contact() {
     <div ref={sectionRef} className="max-w-7xl mx-auto py-20 px-4">
       {/* Headings */}
       <h2
-        className={`text-sm md:text-2xl font-thin tracking-widest uppercase text-gray-600 transition-all duration-700 mb-2
+        className={`text-sm md:text-lg font-thin tracking-widest uppercase text-gray-600 transition-all duration-700 mb-2
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
       >
         {contactText.header}

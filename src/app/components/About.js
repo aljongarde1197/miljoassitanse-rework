@@ -66,7 +66,7 @@ export default function About() {
         {/* Animated heading */}
         <h2
           ref={headingRef}
-          className={`text-3xl font-thin mb-1 text-center transform transition-all duration-700 ${
+          className={`text-lg font-thin mb-1 text-center transform transition-all duration-700 ${
             headingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
           }`}
         >
