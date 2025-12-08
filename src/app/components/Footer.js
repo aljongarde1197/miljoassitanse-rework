@@ -76,7 +76,7 @@ export default function Footer() {
       <div className="border-t border-white/20 py-6 text-center text-sm opacity-90">
         <p>
           {/* © {year ?? "..."} {footerText.companyName}. {footerText.rights} */}
-          © {year ?? "..."} Miljøassistanse. {footerText.rights}
+          © {year ?? "..."} MILJØASSISTANSE. {footerText.rights}
         </p>
       </div>
     </footer>

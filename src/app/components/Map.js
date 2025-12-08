@@ -62,7 +62,7 @@ export default function Map() {
           }`}
         >
           <h3 className="font-semibold text-lg flex items-center gap-2">
-            <MapPinIcon className="w-5 h-5 text-primary" /> Miljøassistanse
+            <MapPinIcon className="w-5 h-5 text-primary uppercase" /> Miljøassistanse
           </h3>
           <p className="text-gray-600 text-sm mt-1">{mapText.addressLine}</p>
           <a

@@ -247,14 +247,14 @@ Footer: {
 
   Map: {
   no: {
-    heading: "Besøk Miljøassistanse",
+    heading: "Besøk MILJØASSISTANSE",
     description:
       "Finn oss i Stathelle, Vestfold og Telemark. Sjekk veibeskrivelse, les anmeldelser og kontakt oss enkelt via Google Maps.",
     addressLine: "Herreveien 57, 3962 Stathelle",
     openMap: "Åpne i Google Maps",
   },
   en: {
-    heading: "Visit Environmental Assistance",
+    heading: "Visit MILJØASSISTANSE",
     description:
       "Find us in Stathelle, Vestfold and Telemark. Check directions, read reviews, and contact us easily via Google Maps.",
     addressLine: "Herreveien 57, 3962 Stathelle",
