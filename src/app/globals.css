@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* ---------- Colors ---------- */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #260d47;
+  --light: #422369;    
+  --secondary: #101c23; 
+  --accent: #15232c; /* optional 3rd color */
+}
+
+/* ---------- Fonts ---------- */
+:root {
+    --font-sans: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  /* --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; */
+  --font-mono: 'Fira Mono', monospace; /* optional monospace */
+}
+
+/* :root {
+  --font-sans: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+} */
+
+
+/* ---------- Theme Variables ---------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-light: var(--light);
+  --color-secondary: var(--secondary);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-heading);
+}
+
+/* ---------- Dark Mode ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --primary: #260d47;  /* keep same for branding */
+    --light: #422369;
+    --secondary: #101c23;
+  }
+}
+
+/* ---------- Base Styles ---------- */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #260d47; /* Scrollbar color */
+  border-radius: 6px; /* Rounded edges */
+  border: 3px solid #f1f1f1; /* Space around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1f0a39; /* Darker on hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #260d47 #f1f1f1; /* thumb and track */
+}
+
