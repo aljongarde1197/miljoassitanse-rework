@@ -69,15 +69,24 @@ export default function Home() {
         {backgroundImages.map((bg, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-center bg-cover transition-opacity duration-1000 ${
-              index === currentBg ? "opacity-100 scale-105" : "opacity-0 scale-100"
+            className={`absolute inset-0 transition-opacity duration-[2000ms] ease-out ${
+              index === currentBg ? "opacity-100" : "opacity-0"
             }`}
-            style={{ backgroundImage: `url(${bg})` }}
-          ></div>
+          >
+            {/* Smooth zoom container */}
+            <div
+              className={`h-full w-full bg-cover bg-center transition-transform duration-[8000ms] ease-out ${
+                index === currentBg ? "scale-110" : "scale-100"
+              }`}
+              style={{ backgroundImage: `url(${bg})` }}
+            />
+          </div>
         ))}
 
+        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
 
+        {/* Content */}
         <div className="relative z-20 h-full flex flex-col items-center justify-center text-center text-white px-4">
           <img
             src="/logo.png"
@@ -90,7 +99,6 @@ export default function Home() {
               showTitle ? "opacity-100" : "opacity-0"
             }`}
           >
-            {/* {homeText.heroTitle} */}
             Miljøassistanse
           </h1>
 
@@ -99,13 +107,13 @@ export default function Home() {
             <div className="flex justify-center items-center gap-4 flex-wrap">
               <a
                 href="#about"
-                className="px-6 py-3 rounded-lg border border-white/30 bg-primary/40 backdrop-blur-md text-white font-semibold shadow-lg hover:bg-primary/50 hover:border-primary/50 hover:backdrop-blur-xs hover:text-white transition-all duration-300"
+                className="px-6 py-3 rounded-lg border border-white/30 bg-primary/40 backdrop-blur-md text-white font-semibold shadow-lg hover:bg-primary/50 hover:border-primary/50 hover:backdrop-blur-xs transition-all duration-300"
               >
                 {homeText.ctaStart}
               </a>
               <a
                 href="#services"
-                className="px-6 py-3 rounded-lg border border-white/30 bg-white/20 backdrop-blur-md text-white font-semibold shadow-lg hover:bg-white/20 hover:border-primary/50 hover:backdrop-blur-xs hover:text-white transition-all duration-300"
+                className="px-6 py-3 rounded-lg border border-white/30 bg-white/20 backdrop-blur-md text-white font-semibold shadow-lg hover:bg-white/20 hover:border-primary/50 hover:backdrop-blur-xs transition-all duration-300"
               >
                 {homeText.ctaServices}
               </a>
@@ -113,6 +121,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
 
       {/* Cards Section */}
       <div className="w-full bg-primary">
